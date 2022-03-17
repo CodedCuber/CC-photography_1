@@ -1,0 +1,65 @@
+html {
+    height:100%;
+    background-color: #eeffdbff
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Roboto&display=swap');
+
+.header {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5ac3daff;
+    font-family: 'Courier New', monospace;
+    
+}
+
+#title_logo {
+    height:fit-content;   
+    display:flex;
+    align-items: center; 
+    
+}
+
+#logo_image {
+    width:9em;
+    height:auto;
+    margin:10px;
+}
+
+#title {
+    font-weight:normal;
+    color:#eeffdbff;
+    font-family: 'Caveat Brush', cursive;
+    font-size: 5em;
+    margin:0px;
+    margin-left: 20px;
+    
+}
+
+
+a {
+    color:white;
+    text-decoration: none;
+}
+
+a:hover {
+    filter: brightness(0.93);
+}
+
+#left_headings, #right_headings {
+    flex:1;
+    display:flex;
+    gap:5em;
+    font-size: x-large;
+}
+
+#left_headings {
+    justify-content:left;
+    padding-left:3em;
+}
+
+#right_headings {
+    justify-content: right;
+    padding-right:3em;
+}

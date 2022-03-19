@@ -3,6 +3,12 @@ html {
     background-color: #eeffdbff
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    height:100%;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Roboto&display=swap');
 
 .header {
@@ -62,4 +68,56 @@ a:hover {
 #right_headings {
     justify-content: right;
     padding-right:3em;
+}
+
+.content {
+    height:100%;
+    display:flex;
+    align-items: stretch;
+    color:#3c3c3bff;
+}
+
+#description {
+    display:flex;
+    justify-content: left;
+}
+
+#collage {
+    width:100%;
+    max-width:800px;
+    text-align: center;
+}
+
+#creativity {
+    font-family: 'Courier New', monospace;
+    text-align: center;
+}
+
+#left_content, #right_content {
+    flex:1;
+    max-width: 50%;
+    padding:20px;
+}
+
+#right_content {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+
+}
+
+footer {
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #3c3c3bff;
+    filter: brightness(0.93);
+}
+
+img {
+    border-radius: 10px;;
 }

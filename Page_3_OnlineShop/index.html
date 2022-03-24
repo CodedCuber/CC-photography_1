@@ -30,6 +30,90 @@
         </div>
     </div>
 
+    <div class="content">
+        <div class="filters">
+            <h1 id="shopBy">Shop by:</h1>
+            <h2>Theme</h2>
+            <div id="checkbox">
+                <input type="checkbox" id="allTheme" name="allTheme">
+                <label for="allTheme">Check all</label>
+            </div>
+            <div id="checkbox">
+                <input type="checkbox" id="beach" name="theme">
+                <label for="beach">Beach</label>
+            </div>
+            <div id="checkbox">
+                <input type="checkbox" id="forest" name="theme">
+                <label for="forest">Forest</label>
+            </div>
+            <div id="checkbox">
+                <input type="checkbox" id="macro" name="theme">
+                <label for="macro">Macro</label>
+            </div>
+            <div id="checkbox">
+                <input type="checkbox" id="astrophotography" name="theme">
+                <label for="astrophotography">Astrophotography</label>
+            </div>
+            <!------------------------------------------------------------------------------------------------>
+            <h2>Color</h2>
+            <div id="checkbox">
+                <input type="checkbox" id="allColor" name="allColor">
+                <label for="allColor">Check all</label>
+            </div>
+            <div id="checkbox">
+                <input type="checkbox" id="black" name="color">
+                <label for="black">Black</label>
+            </div>
+            <div id="checkbox">
+                <input type="checkbox" id="white" name="color">
+                <label for="white">White</label>
+            </div>
+            <div id="checkbox">
+                <input type="checkbox" id="oak" name="color">
+                <label for="oak">Oak</label>
+            </div>
+            <div id="checkbox">
+                <input type="checkbox" id="darkOak" name="color">
+                <label for="darkOak">Dark Oak</label>
+            </div>
+            <!------------------------------------------------------------------------------------------------>
+            <h2>Size</h2>
+            <div id="radioButton">
+                <input type="radio" id="large" name="size" value="large">
+                <label for="large">Large</label>
+            </div>
+            <div id="radioButton">
+                <input type="radio" id="medium" name="size" value="medium">
+                <label for="medium">Medium</label>
+            </div>
+            <div id="radioButton">
+                <input type="radio" id="small" name="size" value="small">
+                <label for="small">Small</label>
+            </div>
+            <!------------------------------------------------------------------------------------------------>
+            <h2>Price</h2>
+            <label for="price">Price range:</label><br>
+            <div class="radioButton">
+                <nobr>
+                <span>$ </span><input type="number" id="min" name="price" min="30" max="140">
+                <p style="text-align: center;">to</p>
+                <span>$ </span><input type="number" id="max" name="price" min="35" max="150">
+                </nobr>
+            </div>
+
+            <button id="filterBtn">Filter</button>
+            <button id="clearBtn">Clear</button>
+
+
+        </div>
+        <div class="items">
+
+        </div>
+    </div>
+
+    <footer>
+        <p>Miki and Llewy 2022</p>
+    </footer>
 
     
 </body>

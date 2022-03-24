@@ -1,6 +1,7 @@
 html {
     height:100%;
-    background-color: #eeffdbff
+    background-color: #eeffdbff;
+    font-family: 'Courier New', monospace;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Roboto&display=swap');
@@ -62,4 +63,92 @@ a:hover {
 #right_headings {
     justify-content: right;
     padding-right:3em;
+}
+
+body {
+    height:100%;
+}
+
+.content{
+    height:100%;
+    display:flex;
+    padding:10px;
+    margin-top:10px;
+}
+
+.filters {
+    flex:1;
+    border:1px solid #3C3C3B;
+    margin:5px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#shopBy {
+    border:1px solid #3C3C3B;
+    margin:20px;
+    width: fit-content;
+    padding:10px;
+    border-radius: 5px;
+    font-weight: normal;
+}
+
+.items {
+    flex:4;
+    border:1px solid #3C3C3B;
+    margin:5px;
+    display:flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding:5px;
+}
+
+#filterBtn {
+    width: 80%;
+    margin-top:20px;
+    height:5%;
+    background-color: #5AC3DA;
+}
+
+#clearBtn {
+    width: 80%;
+    margin-top:20px;
+    height:5%;
+    background-color: #5AC3DA;
+}
+
+.shoppingItem {
+    width: 20%;
+    height:20%;
+    border: 1px solid black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:35px;
+
+}
+
+
+
+#checkbox {
+    font-size: 1.3em;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+#radioButton {
+    font-size: 1.3em;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+footer {
+    height:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #3c3c3bff;
+    filter: brightness(0.93);
 }

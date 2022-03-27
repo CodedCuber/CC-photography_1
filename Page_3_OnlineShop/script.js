@@ -2,49 +2,51 @@ const items = document.querySelector('.items');
 const filterBtn = document.getElementById('filterBtn');
 const clearBtn = document.getElementById('clearBtn');
 
-createDiv('Beach');
-createDiv('Forest');
-createDiv('Macro');
-createDiv('Astrophotography');
+//creating the initial divs and their objects
 
-function createDiv(word) {
-    const existing = document.getElementById(word);
+const beachObj = {name:'Beach', color:'Oak', size:'Medium', price:60, url:'images/beach.jpeg', hex:'#CE9F6F'};
+const forestObj = {name:'Forest', color:'Dark Oak', size:'Medium', price:80, url:'images/forest.jpeg', hex:'#55342B'};
+const macroObj = {name:'Macro', color:'White', size:'Small', price:50, url:'images/macro.jpeg', hex:'#FFFFFF'};
+const astroObj = {name:'Astrophotography', color:'Black', size:'Large', price:120, url:'images/astro.jpeg', hex:'#000000'};
+createDiv(beachObj);
+createDiv(forestObj);
+createDiv(macroObj);
+createDiv(astroObj);
+
+function createDiv(lib) {
+    const existing = document.getElementById(lib.name);
     if (items.contains(existing)){
         existing.remove();
     }
     const square = document.createElement('div');
     square.className = 'shoppingItem';
-    square.id = word;
-    square.textContent = word;
-    items.appendChild(square);
-}
+    square.id = lib.name;
+    square.textContent = lib.name;
 
-function checkTheme(box, keyword, color) {
-    const matchingDiv = document.getElementById(keyword);
-    if (box.checked){
-        if (color.checked){
-            createDiv(keyword);
-        }
-        else {
-            if (items.contains(matchingDiv)){
-                matchingDiv.remove();
-            }
-        }
-    } else if (color.checked) {
-        if (box.checked){
-            createDiv(keyword);
-        }
-        else {
-            if (items.contains(matchingDiv)){
-                matchingDiv.remove();
-            }
-        }
-        
-    } else {
-        if (items.contains(matchingDiv)){
-            matchingDiv.remove();
-        }
-    }
+    let img = document.createElement('img');
+    img.src = lib.url;
+    img.id = 'thumbnail';
+    img.style.backgroundColor = lib.hex;
+    square.appendChild(img);
+
+    const properties = document.createElement('div');
+    properties.id = 'properties';
+    //color
+    const colorProp = document.createElement('p');
+    colorProp.textContent = `\nColor: ${lib.color}`;
+    properties.appendChild(colorProp);
+    //size
+    const sizeProp = document.createElement('p');
+    sizeProp.textContent = `\nSize: ${lib.size}`;
+    properties.appendChild(sizeProp);
+
+    //price
+    const priceProp = document.createElement('p');
+    priceProp.textContent = `\nPrice: $${lib.price}`;
+    properties.appendChild(priceProp);
+
+    square.appendChild(properties);
+    items.appendChild(square);
 }
 
 //themes checkboxes
@@ -90,17 +92,38 @@ colorCheckAll.addEventListener('change', () => {
     }
 })
 
-filterBtn.addEventListener('click', () => {
-
-
-    checkTheme(beach, 'Beach', oak);
-    checkTheme(forest, 'Forest', darkOak);
-    checkTheme(macro, 'Macro', white);
-    checkTheme(astrophotography, 'Astrophotography', black);
-
-
-});
+filterBtn.addEventListener('click', checkFilters);
 
 clearBtn.addEventListener('click', () => {
     items.innerHTML = "";
 })
+
+//size radio button
+const anyRadio = document.getElementById('any');
+const smallRadio = document.getElementById('small');
+const mediumRadio = document.getElementById('medium');
+const largeRadio = document.getElementById('large');
+
+
+//function for checking parameters/filters
+function checkFilters() {
+    const minEl = document.getElementById('min');
+    const maxEl = document.getElementById('max');
+    let min = parseInt(minEl.value);
+    let max = parseInt(maxEl.value);
+
+    items.innerHTML = "";
+    if(beachObj.price >= min && beachObj.price <= max) {
+        if(beach.checked && oak.checked && (mediumRadio.checked || anyRadio.checked)){createDiv(beachObj);}
+    }
+    if(forestObj.price >= min && forestObj.price <= max) {
+        if(forest.checked && darkOak.checked && (mediumRadio.checked || anyRadio.checked)){createDiv(forestObj);}
+    }
+    if(macroObj.price >= min && macroObj.price <= max) {
+        if(macro.checked && white.checked && (smallRadio.checked || anyRadio.checked)){createDiv(macroObj);}
+    }
+    if(astroObj.price >= min && astroObj.price <= max) {
+        if(astrophotography.checked && black.checked && (largeRadio.checked || anyRadio.checked)){createDiv(astroObj);}
+    }
+    
+}

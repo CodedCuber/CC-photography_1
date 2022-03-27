@@ -78,11 +78,11 @@ body {
 
 .filters {
     flex:1;
-    border:1px solid #3C3C3B;
     margin:5px;
     display:flex;
     flex-direction: column;
     align-items: center;
+    border-right: 1px solid black;
 }
 
 #shopBy {
@@ -96,7 +96,6 @@ body {
 
 .items {
     flex:4;
-    border:1px solid #3C3C3B;
     margin:5px;
     display:flex;
     flex-wrap: wrap;
@@ -123,10 +122,26 @@ body {
     height:20%;
     border: 1px solid black;
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin:35px;
+    font-size:large;
+    padding-top:5px;
+    border-radius: 5px;
 
+}
+
+#properties {
+    font-size:small;
+}
+
+#thumbnail {
+    width:50%;
+    height:30%;
+    border: 1px solid black;
+    padding:5px;
+    
 }
 
 

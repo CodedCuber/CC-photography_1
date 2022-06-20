@@ -62,33 +62,27 @@ const white = document.getElementById('white');
 const oak = document.getElementById('oak');
 const darkOak = document.getElementById('darkOak');
 
+function checkAllFour(one, two, three, four, param) {
+  one.checked = param;
+  two.checked = param;
+  three.checked = param;
+  four.checked = param;
+}
 //check/uncheck all color/theme boxes when check all box changed
 themeCheckAll.addEventListener('change', () => {
     if (themeCheckAll.checked) {
-        beach.checked = true;
-        forest.checked = true;
-        macro.checked = true;
-        astrophotography.checked = true;
+        checkAllFour(beach, forest, macro, astrophotography, true)
     }
     else {
-        beach.checked = false;
-        forest.checked = false;
-        macro.checked = false;
-        astrophotography.checked = false;
+        checkAllFour(beach, forest, macro, astrophotography, false)
     }
 })
 colorCheckAll.addEventListener('change', () => {
     if (colorCheckAll.checked) {
-        black.checked = true;
-        white.checked = true;
-        oak.checked = true;
-        darkOak.checked = true;
+        checkAllFour(black, white, oak, darkOak, true)
     }
     else {
-        black.checked = false;
-        white.checked = false;
-        oak.checked = false;
-        darkOak.checked = false;
+        checkAllFour(black, white, oak, darkOak, false)
     }
 })
 
@@ -104,13 +98,42 @@ const smallRadio = document.getElementById('small');
 const mediumRadio = document.getElementById('medium');
 const largeRadio = document.getElementById('large');
 
+//function for checking if nothing is checked
+ function checkNone() {
+   let themeEmpty = !(beach.checked || forest.checked || macro.checked || astrophotography.checked);
+   let colorEmpty = !(oak.checked || darkOak.checked || white.checked || white.checked);
+   let sizeEmpty = !(smallRadio.checked || mediumRadio.checked || largeRadio.checked);
+
+   //ensuring there are no emptpy sections to avoid errors
+   if (themeEmpty) {
+     themeCheckAll.checked = true;
+     checkAllFour(beach, forest, macro, astrophotography, true)
+   }
+   if (colorEmpty) {
+     colorCheckAll.checked = true;
+     checkAllFour(black, white, oak, darkOak, true)
+   }
+   if (sizeEmpty) {
+     anyRadio.checked = true;
+   }
+ }
+
 
 //function for checking parameters/filters
 function checkFilters() {
+    checkNone();
     const minEl = document.getElementById('min');
     const maxEl = document.getElementById('max');
     let min = parseInt(minEl.value);
     let max = parseInt(maxEl.value);
+
+    if(!(min > 0 || min < 110)) {
+      min = 0;
+    }
+
+    if(!(max > 70 || max < 130)) {
+      max = 130;
+    }
 
     items.innerHTML = "";
     if(beachObj.price >= min && beachObj.price <= max) {

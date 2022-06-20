@@ -12,14 +12,14 @@ html {
     align-items: center;
     background-color: #5ac3daff;
     font-family: 'Courier New', monospace;
-    
+
 }
 
 #title_logo {
-    height:fit-content;   
+    height:fit-content;
     display:flex;
-    align-items: center; 
-    
+    align-items: center;
+
 }
 
 #logo_image {
@@ -35,7 +35,7 @@ html {
     font-size: 5em;
     margin:0px;
     margin-left: 20px;
-    
+
 }
 
 
@@ -141,7 +141,7 @@ body {
     height:30%;
     border: 1px solid black;
     padding:5px;
-    
+
 }
 
 

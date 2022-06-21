@@ -11,14 +11,14 @@ html {
     align-items: center;
     background-color: #5ac3daff;
     font-family: 'Courier New', monospace;
-    
+
 }
 
 #title_logo {
-    height:fit-content;   
+    height:fit-content;
     display:flex;
-    align-items: center; 
-    
+    align-items: center;
+
 }
 
 #logo_image {
@@ -34,7 +34,7 @@ html {
     font-size: 5em;
     margin:0px;
     margin-left: 20px;
-    
+
 }
 
 
@@ -62,4 +62,18 @@ a:hover {
 #right_headings {
     justify-content: right;
     padding-right:3em;
+}
+
+.content {
+    display:flex;
+}
+
+#portfolio {
+  font-family:  'Caveat Brush', cursive;
+  font-size: 4em;
+  color: #3c3c3bff;
+  background-image: url("https://spng.pngfind.com/pngs/s/115-1151935_line-clipart-music-notes-clipart-house-clipart-online.png");
+  background-position: 0 1.06em;
+  background-size: 15px 9px;
+  background-repeat: repeat-x;
 }

@@ -66,14 +66,48 @@ a:hover {
 
 .content {
     display:flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 #portfolio {
   font-family:  'Caveat Brush', cursive;
   font-size: 4em;
   color: #3c3c3bff;
-  background-image: url("https://spng.pngfind.com/pngs/s/115-1151935_line-clipart-music-notes-clipart-house-clipart-online.png");
+  text-decoration: underline;
+  /*background-image: url("https://spng.pngfind.com/pngs/s/115-1151935_line-clipart-music-notes-clipart-house-clipart-online.png");
   background-position: 0 1.06em;
   background-size: 15px 9px;
-  background-repeat: repeat-x;
+  background-repeat: repeat-x;*/
+}
+
+.gallery {
+  display:flex;
+  flex-wrap: wrap;
+  border: 1px solid blue;
+  width: 90%;
+  margin: 5%;
+
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 25%;
+  margin: 3%;
+  padding: 1%;
+  border: 1px solid black;
+}
+
+.images {
+  display:flex;
+  width: 90%;
+  justify-content: space-around;
+
+}
+
+#photo {
+  margin: 10px;
 }

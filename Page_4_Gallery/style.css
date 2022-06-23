@@ -99,6 +99,7 @@ a:hover {
   margin: 3%;
   padding: 1%;
   border: 1px solid black;
+
 }
 
 .images {
@@ -110,6 +111,10 @@ a:hover {
 
 #photo {
   margin: 10px;
+  width: auto;
+  height: auto;
+  max-width:136px;
+  max-height: 76.5px;
 }
 
 

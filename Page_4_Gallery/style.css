@@ -85,7 +85,7 @@ a:hover {
 .gallery {
   display:flex;
   flex-wrap: wrap;
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
   width: 90%;
   margin: 5%;
 
@@ -99,6 +99,7 @@ a:hover {
   margin: 3%;
   padding: 1%;
   border: 1px solid black;
+  border-radius: 5px;
 
 }
 
@@ -117,9 +118,15 @@ a:hover {
   max-height: 76.5px;
 }
 
+a {
+  color: #3c3c3bff;
+}
 
-
-
+a:hover {
+  cursor: pointer;
+  color: #3c3c3bff;
+  text-decoration: underline;
+}
 
 footer {
     height:10%;

@@ -65,20 +65,50 @@ a:hover {
 }
 
 .content {
+  color: #3c3c3bff;
   height: 500px;
   display:flex;
   padding: 20px;
   justify-content: space-between;
-  border: 1px solid black;
 
 }
 
 .left_content {
-  border: 1px solid red;
   flex: 1;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .right_content {
-  border: 1px solid blue;
   flex: 1;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contactH {
+  font-size: x-large;
+  padding-left: 25%;
+  padding-right: 25%;
+  font-family: 'Courier New', monospace;
+
+}
+
+#downArrow {
+  font-size: 50px;
+  margin:0px;
+}
+
+.contactItem {
+  align-self:baseline;
+  margin-left: 12%;
+  margin-right: 10%;
+  font-size: 2em;
+}
+
+.socialIcons {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
 }

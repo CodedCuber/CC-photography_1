@@ -118,14 +118,19 @@ a:hover {
   max-height: 76.5px;
 }
 
-a {
+.itemHeading {
   color: #3c3c3bff;
+}
+
+.itemHeading:hover {
+  color: #3c3c3bff;
+  text-decoration: underline;
 }
 
 a:hover {
   cursor: pointer;
-  color: #3c3c3bff;
-  text-decoration: underline;
+  filter: brightness(0.93);
+
 }
 
 footer {

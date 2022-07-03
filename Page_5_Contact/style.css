@@ -11,14 +11,14 @@ html {
     align-items: center;
     background-color: #5ac3daff;
     font-family: 'Courier New', monospace;
-    
+
 }
 
 #title_logo {
-    height:fit-content;   
+    height:fit-content;
     display:flex;
-    align-items: center; 
-    
+    align-items: center;
+
 }
 
 #logo_image {
@@ -34,7 +34,7 @@ html {
     font-size: 5em;
     margin:0px;
     margin-left: 20px;
-    
+
 }
 
 
@@ -62,4 +62,23 @@ a:hover {
 #right_headings {
     justify-content: right;
     padding-right:3em;
+}
+
+.content {
+  height: 500px;
+  display:flex;
+  padding: 20px;
+  justify-content: space-between;
+  border: 1px solid black;
+
+}
+
+.left_content {
+  border: 1px solid red;
+  flex: 1;
+}
+
+.right_content {
+  border: 1px solid blue;
+  flex: 1;
 }
